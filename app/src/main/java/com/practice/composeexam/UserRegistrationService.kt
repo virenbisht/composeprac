@@ -1,10 +1,11 @@
 package com.practice.composeexam;
 
 import javax.inject.Inject
+import javax.inject.Named
 
 
 class UserRegistrationService @Inject constructor(
-    private val userRepository: UserRepository,
+    @Named("sql")private val userRepository: UserRepository,
     private val emailService: EmailService
 ){
 
